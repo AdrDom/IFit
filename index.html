@@ -25,7 +25,7 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<p>O Aplicativo feito para ajudar na saúde do aluno</p>
+								<p>O Aplicativo feito para ajudar na saúde do aluno através do controle da alimentação</p>
 							</div>
 						</div>
 						<nav>
@@ -33,8 +33,8 @@
 								<li><a href="#intro">Introdução</a></li>
 								<li><a href="#func">Funções</a></li>
 								<li><a href="#sobre">Sobre</a></li>
-								<li><a href="#contact">Cadastre-se</a></li>
-								<li><a href="#contact">Entrar</a></li>
+								<li><a href="#cadastro">Cadastre-se</a></li>
+								<li><a href="#entrar">Entrar</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -47,28 +47,76 @@
 							<article id="intro">
 								<h2 class="major">Introdução</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<p>Muitos alunos não sabem a importância de cuidar da saúde e acabam se descuidando na hora de comer e podem ingerir comidas que não fazer muito bem a saúde.</p>
+								<p>O nosso objetivo é proporcionar um proposta para que o aluno do IFPB tenha os cuidados necessários do que ingerir na hora em que estiver na escola, assim proporcionando uma melhor qualidade de vida para o aluno.</p>
 							</article>
 
 						<!-- Funções -->
 							<article id="func">
 								<h2 class="major">Funções</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<p>Pessoas que acompanham suas alimentações conseguem mais do que o dobro da média de perda de peso e os membros perdem peso 3 vezes mais rápido ao fazê-lo com os amigos.</p>
+								<p>O IFit possui como principal atributo seu contador de calorias que apresenta também uma opção que calcula o déficit calórico do indivíduo, no caso o aluno, para que o mesmo obtenha a informação a partir disso.</p>
+                                <p>O IFit possui aplicação móvel em plataforma android e um banco de dados com diversa quantidade de alimentos e seus respectivos indíces calóricos</p>
 							</article>
 
 						<!-- Sobre -->
 							<article id="sobre">
 								<h2 class="major">Sobre</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+                                <p>Criado por : Rosemberg de Lima Tavares Filho, Adriell Araújo de Medeiros</p>
 							</article>
 
 						<!-- Cadastro -->
-							<article id="contact">
-								<h2 class="major">Cadastre-se ou Entre</h2>
+							<article id="cadastro">
+								<h2 class="major">Cadastre-se</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="matricula">Matricula</label>
+										<input type="text" name="matricula" id="matricula" />
+									</div>				
+									<div class="field half">
+										<label for="nome">Nome</label>
+										<input type="text" name="nome" id="nome" />
+									</div>
+									<div class="field">
+										<label for="sexo">Sexo</label>
+										<div class="select-wrapper">
+										<select name="sexo" id="sexo">
+											<option value="1">-</option>
+											<option value="1">Masculino</option>
+											<option value="1">Feminino</option>
+										</select>
+									</div>
+									</div>
+									<div class="field half first">
+										<label for="peso">Peso atual(Kg)</label>
+										<input type="text" name="peso" id="peso" />
+									</div>
+									<div class="field half">
+										<label for="altura">Altura(cm)</label>
+										<input type="text" name="altura" id="altura" />
+									</div>
+									<div class="field half first">
+										<label for="idade">Idade</label>
+										<input type="text" name="idade" id="idade" />
+									</div>
+									<div class="field half">
+										<label for="senha">Senha</label>
+										<input type="password" name="senha" id="senha" />
+									</div>
+									</ul>
+									<ul class="actions">
+										<li><input type="submit" value="Entrar" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+							</article>
+							
+						<!-- Entrar -->
+							
+							<article id="entrar">
+								<h2 class="major">Cadastre-se</h2>
 								<form method="post" action="#">
 									<div class="field half first">
 										<label for="matricula">Matricula</label>
@@ -83,12 +131,6 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
 							</article>
 
 						<!-- Elements -->
