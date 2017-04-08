@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
     <title>IFit</title>
-    
+    <meta charset="utf-8"/>
     <!-- Angular -->
+    <script type="application/javascript" href="js/lib/angular.min.js"></script>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-route.min.js"></script>
     <script src="js/lib/angular-ui-router.min.js"></script>
@@ -27,24 +28,43 @@
     <link rel="stylesheet" href="css/tether.min.css">    
 
     <!-- App -->
-    <script src="js/app.js"></script>
+    <script type="application/javascript" href="js/app.js"></script>
     <!--<script src="js/router/router.js"></script>
     <script src="js/router/state.js"></script> -->
 
     <!-- Controller -->
-    <!--<script src="js/controller/alunoController.js"></script>
-    <script src="js/controller/menuController.js"></script>-->
+    <!--<script src="js/controller/alunoController.js"></script>-->
+    <script type="application/javascript" href="js/controller/menuController.js"></script>
 
     <!-- Service -->
     <script src="js/service/alunoService.js"></script>
 
 </head>
-<body>
-
+<body layout="column">
     <!-- Menu Superior - Cabeçalho -->
-    <md-toolbar>
-        <img src="Lading/logo1.png">
-    </md-toolbar>
+        <div>
+        <header class="headd">
+        <img src="logo48.png" height="100" widht="20" align="left">
+        </header>
+        </div>
+        <div flex layout="row">
+        
+        <!-- Menu Lateral -->
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Menu Lateral</h1>
+            </md-toolbar>
+            <!-- É necessário criar um controller para gerenciar o Sidnav: MenuController -->
+            <md-content layout-padding ng-controller="MenuController"/>
+                <!-- Menu -->
+                <ul class="nav navbar-nav">
+                    <!-- Navegações definidas no state.js para o ui-sref. Não usar pontos (.) na definição da navegação, somente são permitidas as barras (/) -->
+                    <li><a ui-sref="home">Home</a></li>
+                    <li><a ui-sref="cadastrar">Cadastrar</a></li>
+                    <li><a ui-sref="listar">Listar</a></li>
+                </ul>
+            </md-content>
+        </md-sidenav>
 </body>
 </html>
