@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="AngularApp">
+
 <head>
     <title>IFit</title>
     <meta charset="utf-8"/>
     <!-- Angular -->
-    <script type="application/javascript" href="js/lib/angular.min.js"></script>
     <script src="js/lib/angular.min.js"></script>
     <script src="js/lib/angular-route.min.js"></script>
     <script src="js/lib/angular-ui-router.min.js"></script>
@@ -28,43 +28,65 @@
     <link rel="stylesheet" href="css/tether.min.css">    
 
     <!-- App -->
-    <script type="application/javascript" href="js/app.js"></script>
-    <!--<script src="js/router/router.js"></script>
-    <script src="js/router/state.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/router/router.js"></script>
+    <script src="js/router/state.js"></script>
+    <script type="application/javascript" href="js/theming.js"></script>
 
     <!-- Controller -->
-    <!--<script src="js/controller/alunoController.js"></script>-->
-    <script type="application/javascript" href="js/controller/menuController.js"></script>
+    <script src="js/controller/alunoController.js"></script>
+    <script src="js/controller/menuController.js"></script>
 
     <!-- Service -->
     <script src="js/service/alunoService.js"></script>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+
 </head>
-<body layout="column">
+
+<body ng-cloak layout="column">
+    
     <!-- Menu Superior - Cabeçalho -->
-        <div>
-        <header class="headd">
-        <img src="logo48.png" height="100" widht="20" align="left">
-        </header>
-        </div>
-        <div flex layout="row">
+    <md-toolbar class="md-primary md-hue-2">
+        <p><img src="logo72.png"/></p>
+    </md-toolbar>
+
+    <div flex layout="row">
         
         <!-- Menu Lateral -->
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
             <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">Menu Lateral</h1>
+                <h1 class="md-toolbar-tools">Funcionalidades</h1>
             </md-toolbar>
             <!-- É necessário criar um controller para gerenciar o Sidnav: MenuController -->
-            <md-content layout-padding ng-controller="MenuController"/>
+            <md-content layout-padding ng-controller="MenuController">
                 <!-- Menu -->
                 <ul class="nav navbar-nav">
                     <!-- Navegações definidas no state.js para o ui-sref. Não usar pontos (.) na definição da navegação, somente são permitidas as barras (/) -->
-                    <li><a ui-sref="home">Home</a></li>
                     <li><a ui-sref="cadastrar">Cadastrar</a></li>
                     <li><a ui-sref="listar">Listar</a></li>
                 </ul>
             </md-content>
+
         </md-sidenav>
+
+        <!-- Conteúdo que muda dependendo da navegação escolhida -->
+        <div layout="column" flex>
+            <div class="box1">
+                <div ui-view>
+                    <!-- Conteúdo da rota atual -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        Rodapé
+    </footer>
+
 </body>
+
 </html>
