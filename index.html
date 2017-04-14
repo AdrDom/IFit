@@ -48,8 +48,8 @@
 <body ng-cloak layout="column">
     
     <!-- Menu Superior - Cabeçalho -->
-    <md-toolbar class="md-primary md-hue-2">
-        <p><img src="logo72.png"/></p>
+    <md-toolbar class="md-primary">
+        <p><img src="imagens/logo72.png"/></p>
     </md-toolbar>
 
     <div flex layout="row">
@@ -57,7 +57,7 @@
         <!-- Menu Lateral -->
         <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
-            <md-toolbar class="md-theme-indigo">
+            <md-toolbar class="md-primary md-hue-2">
                 <h1 class="md-toolbar-tools">Funcionalidades</h1>
             </md-toolbar>
             <!-- É necessário criar um controller para gerenciar o Sidnav: MenuController -->
@@ -65,8 +65,9 @@
                 <!-- Menu -->
                 <ul class="nav navbar-nav">
                     <!-- Navegações definidas no state.js para o ui-sref. Não usar pontos (.) na definição da navegação, somente são permitidas as barras (/) -->
-                    <li><a ui-sref="cadastrar">Cadastrar</a></li>
-                    <li><a ui-sref="listar">Listar</a></li>
+                    <li><a class="link" ui-sref="cadastrar">Cadastrar</a></li>
+                    <li><a class="link" ui-sref="listar">Listar</a></li>
+                    <li><a class="link" ui-sref="cardapio">Cardápio</a></li>
                 </ul>
             </md-content>
 

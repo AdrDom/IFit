@@ -11,3 +11,9 @@
 footer {
    border: 2px solid blue; 
 }
+.link{
+    color:#000000;
+}
+a:hover{
+    color: chartreuse;
+}

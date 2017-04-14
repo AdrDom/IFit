@@ -1,6 +1,6 @@
 angular.module('IFit', ['ngMaterial'])
 .config(function($mdThemingProvider) {
-  $mdThemingProvider.theme('default')
+  $mdThemingProvider.theme('warn')
     .primaryPalette('pink')
     .accentPalette('orange');
 });
